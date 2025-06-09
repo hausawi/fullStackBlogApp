@@ -18,6 +18,9 @@ app.use('/users', userRoute);
 app.use('/posts', postRoute);
 app.use('/comments', commentRoute);
 
+//Routes
+app.post('/clerk', express.json(), clerkWebhooks);
+
 // Error Handler
 app.use((error, req, res, next) => {
 	res.status(error.status || 500);
@@ -28,9 +31,6 @@ app.use((error, req, res, next) => {
 		stack: error.stack,
 	});
 });
-//Routes
-
-app.post('/clerk', express.json(), clerkWebhooks);
 // API Endpoints
 app.get('/', (req, res) => {
 	res.status(200).send('API Working');
