@@ -4,7 +4,7 @@ import userRoute from './routes/userRoute.js';
 import postRoute from './routes/postRoute.js';
 import commentRoute from './routes/commentRoute.js';
 import connectDB from './lib/connectDB.js';
-import webhookRoute from './routes/webhookRoute.js'
+import { clerkWebhooks } from './controllers/webhookController.js';
 
 // App Config
 const app = express();
@@ -12,8 +12,6 @@ const port = process.env.PORT || 3000;
 // connectDB();
 
 // Middlewares
-app.use('/webhooks', webhookRoute);
-
 app.use(express.json());
 app.use(cors());
 app.use('/users', userRoute);
@@ -30,7 +28,9 @@ app.use((error, req, res, next) => {
 		stack: error.stack,
 	});
 });
+//Routes
 
+app.post('/webhooks/clerk', express.json(), clerkWebhooks);
 // API Endpoints
 app.get('/', (req, res) => {
 	res.status(200).send('API Working');

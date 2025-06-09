@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 
 const userSchema = new Schema(
 	{
-		clerkId: { type: String, required: true, unique: true },
+		// clerkId: { type: String, required: true, unique: true },
 		uesrname: { type: String, required: true, unique: true },
 		email: { type: String, required: true, unique: true },
 		img: { type: String, default: [] },
