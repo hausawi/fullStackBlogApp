@@ -17,7 +17,7 @@ export const clerkWebhooks = async (res, req) => {
 			case 'user.created': {
 				const userData = {
 					_id: data.id,
-					email: data.email_addresses[0].email_addresses,
+					email: data.email_addresses[0].email_address,
 					username: data.username || data.email_address[0].email_address,
 					imageUrl: data.image_url,
 				};
@@ -27,7 +27,7 @@ export const clerkWebhooks = async (res, req) => {
 			}
 			case 'user.updated': {
 				const userData = {
-					email: data.email_addresses[0].email_addresses,
+					email: data.email_address[0].email_address,
 					username: data.username || data.email_address[0].email_address,
 					imageUrl: data.image_url,
 				};
