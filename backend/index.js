@@ -30,7 +30,7 @@ app.use((error, req, res, next) => {
 });
 //Routes
 
-app.post('/webhooks/clerk', express.json(), clerkWebhooks);
+app.post('/clerk', express.json(), clerkWebhooks);
 // API Endpoints
 app.get('/', (req, res) => {
 	res.status(200).send('API Working');
