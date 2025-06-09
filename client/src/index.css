@@ -10,11 +10,11 @@
 /* .tajawal-extrabold {
   font-family: "Tajawal", sans-serif;
   font-weight: 600;
-  font-style: normal;
+  font-style: normal;//ligh gray #e6e6ff gray #414C6B green #049977
 } */
 
 body {
-	background-color: #e6e6ff;
+	background-color: #4c5b85 ; 
 	width: 100vw;
 	overflow: scroll;
 	font-family: 'Tajawal', sans-serif;

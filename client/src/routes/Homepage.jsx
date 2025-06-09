@@ -11,7 +11,7 @@ const Homepage = () => {
 			<div className='flex gap-4'>
 				<Link to='/'>Home</Link>
 				<span>◉</span>
-				<span className='text-blue-800'>Blogs and Articles</span>
+				<span className='text-[#3fd2b0]'>Blogs and Articles</span>
 			</div>
 			{/* INTRODUCTION */}
 			<div className='flex items-center justify-center'>
@@ -20,7 +20,7 @@ const Homepage = () => {
 					<h1 className='text-gray-800 text-2xl md:text-5xl lg:text-6xl font-bold'>
 						Lorem ipsum dolor sit amet consectetur adipisicing.
 					</h1>
-					<p className='mt-8 text-md md:text-xl'>
+					<p className='mt-8 text-md md:text-xl text-[#e6e6ff]'>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
 						incidunt sit doloremque magnam. Voluptate quisquam quos dolore quia
 						unde vel.
@@ -48,7 +48,7 @@ const Homepage = () => {
 							</textPath>
 						</text>
 					</svg>
-					<button className=' absolute top-0 right-0 left-0 bottom-0 w-20 h-20 m-auto bg-blue-800 rounded-full flex items-center justify-center'>
+					<button className=' absolute top-0 right-0 left-0 bottom-0 w-20 h-20 m-auto bg-[#3fd2b0] rounded-full flex items-center justify-center'>
 						<svg
 							width='50px'
 							height='50px'

@@ -1,5 +1,4 @@
 import { Image } from '@imagekit/react';
-import React from 'react';
 import { Link } from 'react-router-dom';
 import PostMenuAction from '../components/PostMenuAction';
 import Search from '../components/Search';
@@ -21,7 +20,7 @@ const SinglePostPage = () => {
 						<Link>Web Design</Link>
 						<span>2 days ago</span>
 					</div>
-					<p className='text-gray-500 font-medium'>
+					<p className='text-gray-400 font-medium'>
 						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla
 						culpa delectus quaerat dolore illum maiores vitae omnis minus totam
 						tempore, a alias animi quam ut et assumenda mollitia numquam nam hic
@@ -136,9 +135,9 @@ const SinglePostPage = () => {
 								urlEndpoint={import.meta.env.VITE_URL_ENDPOINT}
 								src='https://ik.imagekit.io/r6yaoh57f/profile.png?updatedAt=1748803009317'
 							/>
-							<Link className='text-blue-800'>Hmo Hausawi</Link>
+							<Link className='text-[#049977]'>Hmo Hausawi</Link>
 						</div>
-						<p className='text-gray-500 text-sm'>
+						<p className='text-gray-400 text-sm'>
 							Lorem ipsum dolor sit amet consectetur.
 						</p>
 						<div className='flex gap-2'>
@@ -164,7 +163,7 @@ const SinglePostPage = () => {
 								<Image
 									width='30'
 									height='30'
-									className='rounded-full object-cover'
+									className='rounded-full object-cover '
 									urlEndpoint={import.meta.env.VITE_URL_ENDPOINT}
 									src='https://ik.imagekit.io/r6yaoh57f/linkedin.png'
 								/>

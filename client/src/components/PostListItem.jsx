@@ -7,7 +7,8 @@ const PostListItem = () => {
 		<div className='flex-col flex xl:flex-row gap-8'>
 			{/* image */}
 			<div className=' xl:block xl:w-1/3'>
-				<Image className='rounded-2xl object-cover w-735'
+				<Image
+					className='rounded-2xl object-cover w-735'
 					urlEndpoint={import.meta.env.VITE_URL_ENDPOINT}
 					src='https://ik.imagekit.io/r6yaoh57f/blog.jpg'
 				/>
@@ -33,7 +34,7 @@ const PostListItem = () => {
 					dicta iusto, ipsum saepe voluptatum officiis delectus earum in porro
 					et. Rem vitae neque vel!
 				</p>
-				<Link to='/post' className='underline text-blue-800 text-sm'>
+				<Link to='/post' className='underline text-[#3fd2b0] text-sm'>
 					Read More
 				</Link>
 			</div>

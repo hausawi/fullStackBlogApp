@@ -17,7 +17,7 @@ const FeaturePosts = () => {
 				{/* details */}
 				<div className='flex items-center gap-4'>
 					<h1 className='font-semibold lg:text-lg'>01</h1>
-					<Link className='text-blue-800 lg:text-lg'>Web Design</Link>
+					<Link className='text-[#3fd2b0] lg:text-lg'>Web Design</Link>
 					<span className='text-gray-500'>2 days ago</span>
 				</div>
 				{/* title */}
@@ -43,8 +43,8 @@ const FeaturePosts = () => {
 						{/* details */}
 						<div className='flex items-center gap-4 text-sm lg:text-base mb-4'>
 							<h1 className='font-semibold'>02.</h1>
-							<Link className='text-blue-800'>Web Design</Link>
-							<span className='text-gray-500 text-sm'>2 days ago</span>
+							<Link className='text-[#3fd2b0]'>Web Design</Link>
+							<span className='text-gray-400 text-sm'>2 days ago</span>
 						</div>
 						{/* title */}
 						<Link
@@ -57,21 +57,21 @@ const FeaturePosts = () => {
 				</div>
 				{/* third */}
 				<div className=' lg:h-1/3 flex juctify-between gap-4'>
-				<div className='w-1/3 aspect-video'>
-					<Image
-						urlEndpoint={import.meta.env.VITE_URL_ENDPOINT}
-						src='https://ik.imagekit.io/r6yaoh57f/feature3.jpg'
-						className='rounded-3xl object-cover w-full h-full '
-						alt=''
+					<div className='w-1/3 aspect-video'>
+						<Image
+							urlEndpoint={import.meta.env.VITE_URL_ENDPOINT}
+							src='https://ik.imagekit.io/r6yaoh57f/feature3.jpg'
+							className='rounded-3xl object-cover w-full h-full '
+							alt=''
 						/>
-						</div>
+					</div>
 					{/* details and title */}
 					<div className='w2/3'>
 						{/* details */}
 						<div className='flex items-center gap-4 text-sm lg:text-base mb-4'>
 							<h1 className='font-semibold'>03.</h1>
-							<Link className='text-blue-800'>Web Design</Link>
-							<span className='text-gray-500 text-sm'>2 days ago</span>
+							<Link className='text-[#3fd2b0]'>Web Design</Link>
+							<span className='text-gray-400 text-sm'>2 days ago</span>
 						</div>
 						{/* title */}
 						<Link
@@ -84,21 +84,21 @@ const FeaturePosts = () => {
 				</div>
 				{/* fourth */}
 				<div className=' lg:h-1/3 flex juctify-between gap-4'>
-				<div className='w-1/3 aspect-video'>
-					<Image
-						urlEndpoint={import.meta.env.VITE_URL_ENDPOINT}
-						src='https://ik.imagekit.io/r6yaoh57f/feature4.jpg'
-						className='rounded-3xl object-cover w-full h-full'
-						alt=''
+					<div className='w-1/3 aspect-video'>
+						<Image
+							urlEndpoint={import.meta.env.VITE_URL_ENDPOINT}
+							src='https://ik.imagekit.io/r6yaoh57f/feature4.jpg'
+							className='rounded-3xl object-cover w-full h-full'
+							alt=''
 						/>
-						</div>
+					</div>
 					{/* details and title */}
 					<div className='w2/3'>
 						{/* details */}
 						<div className='flex items-center gap-4 text-sm lg:text-base mb-4'>
 							<h1 className='font-semibold'>04.</h1>
-							<Link className='text-blue-800'>Web Design</Link>
-							<span className='text-gray-500 text-sm'>2 days ago</span>
+							<Link className='text-[#3fd2b0]'>Web Design</Link>
+							<span className='text-gray-400 text-sm'>2 days ago</span>
 						</div>
 						{/* title */}
 						<Link

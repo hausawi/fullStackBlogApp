@@ -3,7 +3,7 @@ import React from 'react';
 
 const Comment = () => {
 	return (
-		<div className='p-4 bg-slate-50 rounded-xl mb-8'>
+		<div className='p-4 bg-[#414C6B] rounded-xl mb-8'>
 			<div className='flex items-center gap-4'>
 				<Image
 					urlEndpoint={import.meta.env.VITE_URL_ENDPOINT}
@@ -15,7 +15,7 @@ const Comment = () => {
 				<span className='text-sm text-gray-500'>2 days ago</span>
 			</div>
 			<div className='mt-4'>
-				<p>
+				<p className='text-white'>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente in
 					distinctio quaerat, mollitia dolore voluptates ullam repellendus. Eum
 					rerum, veniam similique accusamus, provident sint distinctio rem
