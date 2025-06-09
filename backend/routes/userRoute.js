@@ -1,7 +1,7 @@
 import express from 'express'
 
 const router = express.Router()
-router.get('/user', (req, res) => {
+router.get('/users', (req, res) => {
     res.status(200).send("User route")
 })
 
