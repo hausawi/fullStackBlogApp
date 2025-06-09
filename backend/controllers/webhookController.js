@@ -2,7 +2,7 @@ import User from '../models/userModels.js';
 import { Webhook } from 'svix';
 
 export const clerkWebhook = async (res, req) => {
-	const WEBHOOK_SECRET = process.env.CLERK_WEBHOK_SECRET;
+	const WEBHOOK_SECRET = process.env.CLERK_WEBHOOK_SECRET;
 
 	if (!WEBHOOK_SECRET) {
 		throw new Error('Webhook secret needed!');

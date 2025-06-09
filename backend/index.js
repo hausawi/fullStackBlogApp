@@ -32,9 +32,9 @@ app.use((error, req, res, next) => {
 });
 
 // API Endpoints
-// app.get('/', (req, res) => {
-// 	res.status(200).send('API Working');
-// });
+app.get('/', (req, res) => {
+	res.status(200).send('API Working');
+});
 
 app.listen(3000, () => {
 	connectDB();
