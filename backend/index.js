@@ -4,13 +4,16 @@ import userRoute from './routes/userRoute.js';
 import postRoute from './routes/postRoute.js';
 import commentRoute from './routes/commentRoute.js';
 import connectDB from './lib/connectDB.js';
-import { clerkWebhooks } from './controllers/webhookController.js';
+import webhookRoute from './routes/webhookRoute.js'
 
 // App Config
 const app = express();
 const port = process.env.PORT || 3000;
 // connectDB();
 
+
+//Routes
+app.use('/webhooks',  webhookRoute);
 // Middlewares
 app.use(express.json());
 app.use(cors());
@@ -18,8 +21,7 @@ app.use('/users', userRoute);
 app.use('/posts', postRoute);
 app.use('/comments', commentRoute);
 
-//Routes
-app.post('/clerk', express.json(), clerkWebhooks);
+
 
 // Error Handler
 app.use((error, req, res, next) => {
