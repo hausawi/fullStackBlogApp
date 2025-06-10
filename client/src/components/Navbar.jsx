@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import { Image } from '@imagekit/react';
 import { Link, NavLink } from 'react-router-dom';
-import { SignedIn, SignedOut, UserButton } from '@clerk/clerk-react';
+import {
+	SignedIn,
+	SignedOut,
+	UserButton,
+	useClerk,
+	useUser,
+} from '@clerk/clerk-react';
 
 const Navbar = () => {
+	const { openSignIn } = useClerk();
+	const { user } = useUser();
 	const [open, setOpen] = useState(false);
 
 	return (
@@ -43,10 +51,16 @@ const Navbar = () => {
 					<NavLink onClick={() => setOpen(false)} to='/about'>
 						About
 					</NavLink>
-					<Link to='/posts'>
-						<button className='py-2 px-4 rounded-3xl bg-[#049977] text-white'>
-							Login
-						</button>
+					<Link onClick={() => setOpen(false)} to='/login'>
+						{user ? (
+							<UserButton />
+						) : (
+							<button
+								onClick={() => openSignIn}
+								className='py-2 px-4 rounded-3xl bg-[#049977] text-white'>
+								Login
+							</button>
+						)}
 					</Link>
 				</div>
 			</div>
@@ -68,16 +82,22 @@ const Navbar = () => {
 					About{' '}
 					<hr className='w-2/4 border-none h-[1.5px] bg-[#049977] hidden' />
 				</NavLink>
-				<SignedOut>
-					<Link to='/login'>
-						<button className='py-2 px-4 rounded-3xl bg-[#049977] text-white'>
+				{/* <SignedOut> */}
+				<Link to='/login'>
+					{user ? (
+						<UserButton />
+					) : (
+						<button
+							onClick={() => openSignIn}
+							className='py-2 px-4 rounded-3xl bg-[#049977] text-white'>
 							Login 🖐
 						</button>
-					</Link>
-				</SignedOut>
+					)}
+				</Link>
+				{/* </SignedOut>
 				<SignedIn>
 					<UserButton />
-				</SignedIn>
+				</SignedIn> */}
 			</div>
 		</div>
 	);
